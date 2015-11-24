@@ -12,7 +12,7 @@ import java.util.List;
  */
 public abstract class BaseElementSelector implements Selector, ElementSelector {
 
-    @Override
+    
     public String select(String text) {
         if (text != null) {
             return select(Jsoup.parse(text));
@@ -20,7 +20,7 @@ public abstract class BaseElementSelector implements Selector, ElementSelector {
         return null;
     }
 
-    @Override
+    
     public List<String> selectList(String text) {
         if (text != null) {
             return selectList(Jsoup.parse(text));

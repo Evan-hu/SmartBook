@@ -13,17 +13,17 @@ public class DummyTypeInfo implements TypeInfo {
         return INSTANCE;
     }
 
-    @Override
+    
     public String getTypeName() {
         return null;
     }
 
-    @Override
+    
     public String getTypeNamespace() {
         return null;
     }
 
-    @Override
+    
     public boolean isDerivedFrom(String typeNamespaceArg, String typeNameArg, int derivationMethod) {
         return false;
     }

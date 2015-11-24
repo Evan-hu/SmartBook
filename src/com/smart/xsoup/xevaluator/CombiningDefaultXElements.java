@@ -23,7 +23,7 @@ public class CombiningDefaultXElements implements XElements {
         this.elementsList = Arrays.asList(elementsList);
     }
 
-    @Override
+    
     public String get() {
         for (XElements xElements : elementsList) {
             String result = xElements.get();
@@ -34,7 +34,7 @@ public class CombiningDefaultXElements implements XElements {
         return null;
     }
 
-    @Override
+    
     public List<String> list() {
         List<String> results = new ArrayList<String>();
         for (XElements xElements : elementsList) {

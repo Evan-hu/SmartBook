@@ -20,7 +20,7 @@ public class SmartContentSelector implements Selector {
     public SmartContentSelector() {
     }
 
-    @Override
+    
     public String select(String html) {
         html = html.replaceAll("(?is)<!DOCTYPE.*?>", "");
         html = html.replaceAll("(?is)<!--.*?-->", "");				// remove html comment
@@ -85,7 +85,7 @@ public class SmartContentSelector implements Selector {
         return text.toString();
     }
 
-    @Override
+    
     public List<String> selectList(String text) {
         throw new UnsupportedOperationException();
     }

@@ -29,18 +29,18 @@ public class ReplaceSelector implements Selector {
         }
     }
 
-    @Override
+    
     public String select(String text) {
         Matcher matcher = regex.matcher(text);
         return matcher.replaceAll(replacement);
     }
 
-    @Override
+    
     public List<String> selectList(String text) {
         throw new UnsupportedOperationException();
     }
 
-    @Override
+    
     public String toString() {
         return regexStr + "_" + replacement;
     }

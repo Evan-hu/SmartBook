@@ -20,7 +20,7 @@ public class DefaultXElement implements XElement {
         this.elementOperator = elementOperator;
     }
 
-    @Override
+    
     public String get(){
         return get(elementOperator);
     }
@@ -37,7 +37,7 @@ public class DefaultXElement implements XElement {
          return get();
     }
 
-    @Override
+    
     public Element getElement() {
         return element;
     }

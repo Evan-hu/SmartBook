@@ -26,24 +26,24 @@ public class HtmlNode extends AbstractSelectable {
         return elements;
     }
 
-    @Override
+    
     public Selectable smartContent() {
         SmartContentSelector smartContentSelector = Selectors.smartContent();
         return select(smartContentSelector, getSourceTexts());
     }
 
-    @Override
+    
     public Selectable links() {
         return xpath("//a/@href");
     }
 
-    @Override
+    
     public Selectable xpath(String xpath) {
         XpathSelector xpathSelector = Selectors.xpath(xpath);
         return selectElements(xpathSelector);
     }
 
-    @Override
+    
     public Selectable selectList(Selector selector) {
         if (selector instanceof BaseElementSelector) {
            return selectElements((BaseElementSelector) selector);
@@ -51,7 +51,7 @@ public class HtmlNode extends AbstractSelectable {
         return selectList(selector, getSourceTexts());
     }
 
-    @Override
+    
     public Selectable select(Selector selector) {
         return selectList(selector);
     }
@@ -104,19 +104,19 @@ public class HtmlNode extends AbstractSelectable {
         return element;
     }
 
-    @Override
+    
     public Selectable $(String selector) {
         CssSelector cssSelector = Selectors.$(selector);
         return selectElements(cssSelector);
     }
 
-    @Override
+    
     public Selectable $(String selector, String attrName) {
         CssSelector cssSelector = Selectors.$(selector, attrName);
         return selectElements(cssSelector);
     }
 
-    @Override
+    
     public List<Selectable> nodes() {
         List<Selectable> selectables = new ArrayList<Selectable>();
         for (Element element : getElements()) {
@@ -127,7 +127,7 @@ public class HtmlNode extends AbstractSelectable {
         return selectables;
     }
 
-    @Override
+    
     protected List<String> getSourceTexts() {
         List<String> sourceTexts = new ArrayList<String>(getElements().size());
         for (Element element : getElements()) {

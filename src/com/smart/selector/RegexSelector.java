@@ -47,12 +47,12 @@ public class RegexSelector implements Selector {
         this(regexStr, 1);
     }
 
-    @Override
+    
     public String select(String text) {
         return selectGroup(text).get(group);
     }
 
-    @Override
+    
     public List<String> selectList(String text) {
         List<String> strings = new ArrayList<String>();
         List<RegexResult> results = selectGroupList(text);
@@ -87,7 +87,7 @@ public class RegexSelector implements Selector {
         return resultList;
     }
 
-    @Override
+    
     public String toString() {
         return regexStr;
     }

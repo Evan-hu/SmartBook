@@ -25,42 +25,42 @@ public class NamedNodeMapAdaptor implements NamedNodeMap {
 
     private Map<String, Node> nodeMap;
 
-    @Override
+    
     public Node getNamedItem(String name) {
         return nodeMap.get(name);
     }
 
-    @Override
+    
     public Node setNamedItem(Node arg) throws DOMException {
         throw new UnsupportedOperationException();
     }
 
-    @Override
+    
     public Node removeNamedItem(String name) throws DOMException {
         throw new UnsupportedOperationException();
     }
 
-    @Override
+    
     public Node item(int index) {
         return nodeList.get(index);
     }
 
-    @Override
+    
     public int getLength() {
         return nodeList.size();
     }
 
-    @Override
+    
     public Node getNamedItemNS(String namespaceURI, String localName) throws DOMException {
         throw new UnsupportedOperationException();
     }
 
-    @Override
+    
     public Node setNamedItemNS(Node arg) throws DOMException {
         throw new UnsupportedOperationException();
     }
 
-    @Override
+    
     public Node removeNamedItemNS(String namespaceURI, String localName) throws DOMException {
         throw new UnsupportedOperationException();
     }

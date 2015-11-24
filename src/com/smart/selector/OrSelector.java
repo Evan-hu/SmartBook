@@ -23,7 +23,7 @@ public class OrSelector implements Selector {
         this.selectors = selectors;
     }
 
-    @Override
+    
     public String select(String text) {
         for (Selector selector : selectors) {
             String result = selector.select(text);
@@ -34,7 +34,7 @@ public class OrSelector implements Selector {
         return null;
     }
 
-    @Override
+    
     public List<String> selectList(String text) {
         List<String> results = new ArrayList<String>();
         for (Selector selector : selectors) {

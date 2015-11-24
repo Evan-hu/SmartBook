@@ -33,21 +33,21 @@ public class XPathParser {
     private static final Map<String, FunctionEvaluator> FUNCTION_MAPPING = new HashMap<String, FunctionEvaluator>();
     static {
         FUNCTION_MAPPING.put("contains", new FunctionEvaluator() {
-            @Override
+            
             public Evaluator call(String... param) {
                 Validate.isTrue(param.length == 2, String.format("Error argument of %s", "contains"));
                 return new Evaluator.AttributeWithValueContaining(param[0], param[1]);
             }
         });
         FUNCTION_MAPPING.put("starts-with", new FunctionEvaluator() {
-            @Override
+            
             public Evaluator call(String... param) {
                 Validate.isTrue(param.length == 2, String.format("Error argument of %s", "starts-with"));
                 return new Evaluator.AttributeWithValueStarting(param[0], param[1]);
             }
         });
         FUNCTION_MAPPING.put("ends-with", new FunctionEvaluator() {
-            @Override
+            
             public Evaluator call(String... param) {
                 Validate.isTrue(param.length == 2, String.format("Error argument of %s", "ends-with"));
                 return new Evaluator.AttributeWithValueEnding(param[0], param[1]);

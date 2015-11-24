@@ -32,7 +32,7 @@ public class DefaultXElements extends ArrayList<XElement> implements XElements {
         }
     }
 
-    @Override
+    
     public String get() {
         if (size() < 1) {
             return null;
@@ -41,7 +41,7 @@ public class DefaultXElements extends ArrayList<XElement> implements XElements {
         }
     }
 
-    @Override
+    
     public List<String> list() {
         List<String> resultStrings = new ArrayList<String>();
         for (XElement xElement : this) {
@@ -53,12 +53,12 @@ public class DefaultXElements extends ArrayList<XElement> implements XElements {
         return resultStrings;
     }
 
-    @Override
+    
     public String toString() {
         return get();
     }
 
-    @Override
+    
     public Elements getElements() {
         return elements;
     }

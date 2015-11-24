@@ -23,7 +23,7 @@ public class DefaultXPathEvaluator implements XPathEvaluator {
         this.elementOperator = elementOperator;
     }
 
-    @Override
+    
     public XElements evaluate(Element element) {
         Elements elements;
         if (evaluator != null) {
@@ -35,7 +35,7 @@ public class DefaultXPathEvaluator implements XPathEvaluator {
         return new DefaultXElements(elements, elementOperator);
     }
 
-    @Override
+    
     public boolean hasAttribute() {
         return elementOperator != null;
     }

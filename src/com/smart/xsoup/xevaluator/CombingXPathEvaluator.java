@@ -24,7 +24,7 @@ public class CombingXPathEvaluator implements XPathEvaluator {
         this.xPathEvaluators = Arrays.asList(xPathEvaluators);
     }
 
-    @Override
+    
     public XElements evaluate(Element element) {
         List<XElements> xElementses = new ArrayList<XElements>();
         for (XPathEvaluator xPathEvaluator : xPathEvaluators) {
@@ -33,7 +33,7 @@ public class CombingXPathEvaluator implements XPathEvaluator {
         return new CombiningDefaultXElements(xElementses);
     }
 
-    @Override
+    
     public boolean hasAttribute() {
         for (XPathEvaluator xPathEvaluator : xPathEvaluators) {
             if (xPathEvaluator.hasAttribute()){

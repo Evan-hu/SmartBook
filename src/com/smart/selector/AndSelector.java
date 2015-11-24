@@ -23,7 +23,7 @@ public class AndSelector implements Selector {
         this.selectors = selectors;
     }
 
-    @Override
+    
     public String select(String text) {
         for (Selector selector : selectors) {
             if (text == null) {
@@ -34,7 +34,7 @@ public class AndSelector implements Selector {
         return text;
     }
 
-    @Override
+    
     public List<String> selectList(String text) {
         List<String> results = new ArrayList<String>();
         boolean first = true;
